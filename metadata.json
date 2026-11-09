@@ -1,0 +1,8 @@
+{
+  "name": "MyCrochify — Romantic Rose Crochet Atelier",
+  "description": "Sophisticated, feminine handmade crochet boutique with a romantic rose aesthetic, bespoke commissions, and heirloom knitwear.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

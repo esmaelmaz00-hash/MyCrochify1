@@ -1,0 +1,124 @@
+@import "tailwindcss";
+
+:root {
+  --color-warm-ivory: #FFF9F7;
+  --color-soft-sage: #DCE5D8;
+  --color-soft-sage-hover: #CFDCB9;
+  --color-soft-sage-subtle: #EEF3EC;
+  --color-soft-linen: #EDE7DF;
+  --color-soft-linen-light: #F6F2EC;
+  --color-dusty-rose: #E8BFC5;
+  --color-vintage-rose: #C98796;
+  --color-rosewood: #A65F73;
+  --color-rosewood-hover: #8F4C5F;
+  --color-deep-plum: #49343B;
+  --color-muted-plum: #735760;
+
+  --font-serif: "Playfair Display", "Cormorant Garamond", Georgia, serif;
+  --font-sans: "DM Sans", "Plus Jakarta Sans", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-deep-plum);
+  background-color: var(--color-warm-ivory);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-warm-ivory);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-soft-sage);
+  border-radius: 9999px;
+  border: 2px solid var(--color-warm-ivory);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #C8D4C3;
+}
+
+/* Typography Helpers */
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+/* Soft Shadows */
+.shadow-soft {
+  box-shadow: 0 4px 20px -2px rgba(73, 52, 59, 0.06);
+}
+
+.shadow-card {
+  box-shadow: 0 10px 30px -10px rgba(73, 52, 59, 0.08);
+}
+
+.shadow-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.shadow-hover:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 36px -12px rgba(73, 52, 59, 0.12);
+}
+
+/* Drawer & Modal Transitions */
+.modal-overlay {
+  background: rgba(73, 52, 59, 0.6);
+  backdrop-filter: blur(4px);
+  transition: opacity 0.25s ease-out;
+}
+
+.drawer-panel {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Line Clamp Utilities */
+.line-clamp-1 {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Print Optimization */
+@media print {
+  header, footer, .no-print, #toast-container, .modal-overlay {
+    display: none !important;
+  }
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+}
